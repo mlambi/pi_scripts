@@ -1,0 +1,16 @@
+127.0.0.1	localhost
+::1		localhost ip6-localhost ip6-loopback
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
+
+127.0.1.1	node01
+10.0.0.23	node01
+
+10.0.0.2	fishy
+10.0.0.8	doormouse
+10.0.0.17	b-cam-02
+10.0.0.22	unicorn
+10.0.0.24	limestone
+10.0.0.30	corner-cam
+10.0.0.35	pi4dip
+
