@@ -3,6 +3,7 @@
 
 
 10.0.0.2	fishy
+10.0.0.8	octopi
 10.0.0.10	cam01
 10.0.0.17	b-cam-02
 10.0.0.22	unicorn
@@ -13,4 +14,10 @@
 10.0.0.30	corner-cam
 10.0.0.31	pi0cam01
 10.0.0.35	pi4dip
+
+192.168.100.1   pi4dip
+192.168.100.53  r9000
+192.168.100.54  enviro	enviropi
+192.168.100.67  argon1-wired    argon1
+192.168.100.68  argon1-wifi
 
