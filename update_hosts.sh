@@ -8,5 +8,5 @@
 
 while IFS= read -r line;do
     echo "$line" >> /etc/hosts
-done < "/home/pi/Desktop/pi_scripts/hosts.txt"
+done < "/home/pi/pi_scripts/hosts.txt"
 echo "completed"
