@@ -19,4 +19,5 @@
 192.168.100.67  argon1-wired    argon1
 192.168.100.68  argon1-wifi
 192.168.100.72  node01
+192.168.100.73  ategee
 
