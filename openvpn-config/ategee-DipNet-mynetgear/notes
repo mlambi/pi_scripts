@@ -1,0 +1,9 @@
+start with 
+sudo openvpn --config client.conf
+
+after conneting you need to use
+sudo dhclient tap0
+to get an address.
+
+This came from /etc/openvpn/client on ategee.
+The client.key is not included here.
