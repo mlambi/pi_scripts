@@ -1,18 +1,43 @@
+127.0.0.1	localhost
+::1		localhost ip6-localhost ip6-loopback
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
 
-10.0.0.5	argon1
+127.0.1.1	doormouse
+
+10.0.0.2	fishy
 10.0.0.8	octopi
 10.0.0.10	cam01
+10.0.0.17	b-cam-02
 10.0.0.22	unicorn
+# 10.0.0.23	node01
 10.0.0.24	limestone
 10.0.0.25	doormouse
+10.0.0.28	argon1
 10.0.0.30	corner-cam
+10.0.0.31	pi0cam01
+10.0.0.34	doorcam
+10.0.0.35	pi4dip
+
+10.0.0.37	blueberry
+
+10.0.0.58	cam-00
+10.0.0.9	cam-01
+10.0.0.12	cam-02
+10.0.0.13	cam-03
+10.0.0.14	cam-04
+10.0.0.60	cam-05
+10.0.0.61	cam-06
+10.0.0.62	cam-07
+10.0.0.63	cam-08
+10.0.0.59	cam-09
+
+
 
 192.168.100.1   pi4dip
-192.168.100.53  r7000
+192.168.100.53  r9000
 192.168.100.54  enviro	enviropi
-192.168.100.78	noirclopse
-192.168.100.135	lli-02
-192.168.100.145	pi0-cam01
-192.168.100.146  ategee
-192.168.100.147  grey-2
+192.168.100.67  argon1-wired    argon1
+192.168.100.68  argon1-wifi
+192.168.100.72  node01
 
