@@ -18,47 +18,65 @@ Here is a chart:
 import subprocess
 import argparse
 
-# started adding argparse, but bailed
-# DEFAULT_HEX_VALUE = hexval
+# setting this up backward
+# popping from the list will start with the last item
+message_list = [
+        'under-voltage',
+        'currently throttled',
+        'arm frequency capped',
+        'soft temperature reached',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'no message',
+        'under-voltage has occurred since last reboot',
+        'throttling has occurred since last reboot',
+        'arm frequency capped ahs occurred since last reboot',
+        'soft temperature reached since last reboot'
+        ]
+
+for i in range(len(message_list)):
+    print(message_list[i])
 
 # get the status from 'vcgencmd get_throttled'
 output = subprocess.check_output(['vcgencmd','get_throttled'])
 # output has a \n and is in binary, and has extra
 # b'throttled=0x0'\n
 hexval =(output.decode('UTF-8').split("=")[1].strip())
+# enter a custom hex value below for testing or comment out
+hexval = '0x8000'
 print(hexval)
 # convert it to binary
 intval = (bin(int(hexval,16))[2:].zfill(16))
 print(intval)
 
-# trying to do something static here, since I am working
-# on a clean system.
-hex_val = '0x8'
-
-val_list = list(bin(int(hex_val,16))[2:].zfill(16))
-print(f'val_list is: {val_list}')
-
-'''
-def main():
-    # do this later, for now hard-code some hex vars
-    parser = argparse.ArguementParser(
-            description="Input test values")
-    parser.add_argument(
-            "--broker",
-            default=DEFAULT_HEX_VALUE,
-            type=str
-# we can 
-'''
+# next we assign the binary value to a list
 int_list = list(intval)
-
 print(int_list)
-for i in range(16):
-    # print(int_list.pop())
-    try:
-        if int_list.pop() == 1:
-            print(f'index is {i}')
-    except IndexError:
-        pass
+
+return_message = []
 
 
+for i in range(len(message_list)):
+    # print(int_list.pop()) # don't do this is will pop a value off the list
+    popVal = int(int_list.pop())
+    print(f'popVal is : {popVal} and type is {type(popVal)}')
+    if popVal == 1:
+        # print(f'index is {i} and the return message is: {return_message[i]}')
+        print(f'index is {i}')
+        print(message_list[i])
+        # return_message.append(message_list[i])
+    else:
+        print(f'no message returned from: {popVal}')
 
+
+print(return_message)
